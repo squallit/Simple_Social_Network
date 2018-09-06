@@ -35,26 +35,14 @@
 
       <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
-          <li>
-            <a href="#" >Post</a>
-          </li>
-          <li>
-            <a href="#">Groups</a>
-          </li>
-          <li>
-            <a href="#">Create Groups</a>
-          </li>
-          <li>
-            <a href="{% url 'accounts:logout' %}" >Log out</a>
-          </li>
-          <li>
-            <a >Welcome: {{ user.username }}</a>
-          </li>
+              <li><a href="{% url 'posts:create' %}" class="btn btn-simple">Post</a></li>
+              <li><a href="{% url 'groups:all' %}" class="btn btn-simple">Groups</a></li>
+              <li><a href="{% url 'groups:create' %}" class="btn btn-simple">Create Group</a></li>
+              <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a></li>
         {% else %}
-          <li><a class='nav navbar-right' href="{% url 'accounts:login' %}" ><span class="glyphicon glyphicon-user"></span></a></li>
-          <li>
-            <a href="{% url 'accounts:signup' %}" >Sign Up</a>
-          </li>
+              <li><a href="{% url 'groups:all' %}"class="btn btn-simple">Groups</a></li>
+              <li><a href="{% url 'accounts:login' %}" class="btn btn-simple">Log in</a></li>
+              <li><a href="{% url 'accounts:signup' %}" class="btn btn-simple">Sign up</a></li>
         {% endif %}
 
       </ul>
@@ -66,5 +54,7 @@
 
     {% endblock %}
 
+    <canvas id="canvas"></canvas>
   </body>
+  <script type="text/javascript" src="{% static 'simplesocial/js/master.js' %}"></script>
 </html>
