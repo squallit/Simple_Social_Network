@@ -1,0 +1,29 @@
+# Create a virtual envinronment and activate:
+# this is an example of activating an envinronment on my computer
+source activate MyDjangoEnv
+
+
+#Install all dependencies
+
+argon2-cffi==18.3.0
+bcrypt==3.1.4
+certifi==2018.4.16
+cffi==1.11.5
+Django==2.0.5
+django-bootstrap3==11.0.0
+django-braces==1.13.0
+django-debug-toolbar==1.10
+Faker==0.9.0
+misaka==2.1.0
+Pillow==5.2.0
+pycparser==2.18
+python-dateutil==2.7.3
+pytz==2018.5
+six==1.11.0
+sqlparse==0.2.4
+text-unidecode==1.2
+
+
+# Run project
+# Runserver
+python manage.py runserver
